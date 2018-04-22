@@ -1,0 +1,7 @@
+{
+  "name": "open-library-layout-galen",
+  "version": "0.0.1",
+  "dependencies": {
+    "galenframework-cli": "2.3.6"
+  }
+}

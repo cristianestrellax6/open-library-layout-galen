@@ -1,0 +1,52 @@
+@@ set 
+    login          https://openlibrary.org/account/login
+    signup         https://openlibrary.org/account/create
+
+    SignUpPage     ../tests/SignUpPage.gspec
+    LoginPage      ../tests/LoginPage.gspec
+
+    #used to run in SauceLabs
+    sauceKey        325325-1515-235325325-2353253325
+    sauceUser       xxxxxx
+    gridLogin       ${sauceUser}:${sauceKey}
+    gridUrl         http://${gridLogin}@ondemand.saucelabs.com:80/wd/hub
+
+@@ table MyDevices
+    | deviceName | tags      | size     |
+    | Desktop    | desktop   | 1300x800 |
+    | Tablet     | tablet    | 800x800  |
+    | Mobile     | mobile    | 500x800  |
+
+@@ parameterized 
+    | browser  |
+   #| firefox  |
+    | chrome   |
+@@ parameterized using MyDevices
+SignUp page on ${deviceName} device in ${browser} browser
+	selenium ${browser} ${signup} ${size}
+		check ${SignUpPage} --include "${tags}"
+
+@@ parameterized 
+    | browser  |
+   #| firefox  |
+    | chrome   |
+@@ parameterized using MyDevices
+Login page on ${deviceName} device in ${browser} browser
+	selenium ${browser} ${login} ${size}
+		check ${LoginPage} --include "${tags}"
+
+###########################################################################################
+#SELENIUM SAUCELABS GRID EXAMPLE.
+#@@ table browsers
+#| browserName   | gridArgs                                                               |
+#| Safari on Mac | --browser "safari" --version 6   --dc.platform "OS X 10.8"             |
+#| Opera         | --browser "opera" --version 12   --dc.platform "Linux"                 |
+#| Firefox       | --browser "firefox" --version 34 --dc.platform "Linux"                 |
+#| Chrome        | --browser "chrome" --version 39 --dc.platform "Linux"                  |
+#| IE 11         | --browser "internet explorer" --version 11 --dc.platform "Windows 8.1" |
+
+
+#@@ parameterized using browsers
+#Home page on ${browserName} browser
+#check homepage.spec
+#selenium grid ${gridUrl} --page ${website} ${gridArgs}

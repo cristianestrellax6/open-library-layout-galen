@@ -1,0 +1,6 @@
+@objects
+		titleLabel		#contentHead h1
+		usernameBox		[name*='username']
+		passwordBox		[name*='password']
+		loginButton		[name*='login']
+		rememberMe		.formElement [name*='remember']

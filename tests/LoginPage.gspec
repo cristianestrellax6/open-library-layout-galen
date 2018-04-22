@@ -1,0 +1,44 @@
+@import ../utils/locators/LoginLocators.gspec
+@import ../utils/common/UpperPage.gspec	
+@import ../utils/common/FooterPage.gspec	
+
+= Login Page =
+	
+	titleLabel:
+		@on desktop,tablet,mobile
+		height 35 px
+		above usernameBox 106 px
+		text is "Log In"
+
+		@on desktop
+			below menu 118 px
+		@on tablet
+			below menu 82 px
+
+	usernameBox:
+		aligned vertically all passwordBox
+
+		@on desktop, tablet, mobile
+			width 	485 px
+			below titleLabel 106 px
+			above passwordBox 38 px
+			aligned vertically left loginButton
+
+		@on desktop,tablet,mobile
+			height 	28 	px
+				
+	passwordBox:
+		aligned vertically all usernameBox
+
+		@on desktop, tablet, mobile 
+			width 	485 px
+			below usernameBox 38 px
+			aligned vertically left loginButton
+			aligned vertically left rememberMe
+
+		@on desktop,tablet,mobile
+			height 	28 	px
+		
+	loginButton:
+		@on desktop, tablet, mobile
+			aligned vertically left rememberMe

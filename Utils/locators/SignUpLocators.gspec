@@ -1,0 +1,9 @@
+@objects
+	titleLabel		#contentHead
+	email			#emailAddr
+	screenName		#username
+	password		#password
+	password2		#password2
+	captcha			.g-recaptcha
+	terms			#agreement
+	signUp			.input #signup

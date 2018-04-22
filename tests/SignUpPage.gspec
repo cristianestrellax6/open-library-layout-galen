@@ -1,0 +1,50 @@
+@import ../utils/locators/SignUpLocators.gspec
+@import ../utils/common/UpperPage.gspec
+@import ../utils/common/FooterPage.gspec
+
+= SignUp page =
+    titleLabel:
+        above email 30 px
+        height 110 px
+        @on desktop
+            below menu 98 px
+        @on tablet
+            below menu 62 px
+    email:
+        below titleLabel 30 px
+        above screenName 43 px
+        height 28 px
+    screenName:
+        below email 43 px
+        above password 56 px
+        height 28 px
+    password:
+        below screenName 56 px
+        above password2 38 px
+        height 28 px
+    password2:
+        below password 38 px
+        above captcha 56 px
+        height 28 px
+    captcha:
+        below password2 56 px
+        above terms 23 px
+        height 78 px
+    terms:
+        below captcha 23 px
+        above signUp 29 px
+        height 12 px
+    signUp:
+        below terms 29 px
+        above footer 41 px
+        height 26 px
+
+
+
+
+
+
+
+
+
+

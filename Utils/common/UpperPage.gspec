@@ -1,0 +1,63 @@
+@objects
+	header			#header-bar
+		logo		.logo-txt
+
+    menu 			.navigation-component
+		browse		li.browse-menu
+		myBooks		li.my-books-menu
+		more		li.more-menu
+	
+	search			.search-bar-component
+
+= Header =
+    header:
+        centered horizontally inside viewport
+
+    	@on desktop
+        	height 60 px
+		@on tablet,mobile
+			height 88 px
+
+	header.logo:
+		@on desktop
+			width 182 px
+			height 47 px
+		@on tablet,mobile
+			height 50 px
+
+= Menu =
+	menu:
+		@on desktop
+			right-of header.logo 15 px
+			left-of search 0 px
+		@on tablet,mobile
+			below header.logo 5 px
+			below search 7 px
+
+		@on desktop,tablet,mobile
+			height 	28 px
+
+		@on tablet
+			width 785 px
+
+		@on mobile
+			width 485 px
+
+		@on desktop
+			width 297 px
+
+	menu.browse:
+		left-of menu.myBooks -1 to 0 px
+		aligned horizontally all menu.myBooks
+		height 28 px
+
+	menu.myBooks:
+		right-of menu.browse -1 to 0 px
+		aligned horizontally all menu.browse
+		height 28 px
+
+	@on desktop
+		menu.more:
+			left-of search 0 px
+			aligned horizontally all menu.myBooks
+			height 28 px

@@ -1,0 +1,7 @@
+@objects
+    footer 		#footer
+
+
+= Footer =
+	footer:
+		centered horizontally inside viewport
